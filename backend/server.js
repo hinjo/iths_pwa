@@ -159,6 +159,8 @@ function sendPushNotificationToAll(req, res) {
 
 app.use(express.static(path.join(path.resolve(), "../public")));
 
-app.listen({ port: 8081 }, () => {
-  console.log("lyssnar på port 8081");
+const port = process.env.PORT || 8081;
+
+app.listen({ port }, () => {
+  console.log("lyssnar på port " + port);
 });
