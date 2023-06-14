@@ -41,7 +41,8 @@ async function postSubscription(subscription) {
   console.log(subscription.endpoint);
   console.log(JSON.stringify(subscription));
   const response = await fetch(
-    `http://localhost:8081/subscription`,
+    `/subscription`,
+    // `http://localhost:8081/subscription`,
     // `https://push-notification-demo-server.herokuapp.com/subscription`,
     {
       credentials: "omit",
