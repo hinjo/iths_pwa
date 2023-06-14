@@ -16,6 +16,7 @@ app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use("/", express.static(path.join(__dirname, "public")));
 
 app.post("/login", (req, res) => {
   res.status(200).send(req.body.email + " " + req.body.password);
