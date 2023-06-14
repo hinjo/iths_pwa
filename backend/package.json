@@ -2,8 +2,8 @@
   "scripts": {
     "build-frontend": "npm run --prefix ../frontend build && rm -Rf public && cp -R ../frontend/build public",
     "deploy": "git add .. && git commit && cd .. && git subtree push --prefix backend heroku main",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
